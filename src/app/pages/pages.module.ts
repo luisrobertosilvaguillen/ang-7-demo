@@ -13,6 +13,7 @@ import { SecurepagesComponent } from './securepages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProgressComponent } from './progress/progress.component';
 import { Graphs1Component } from './graphs1/graphs1.component';
+import { AccountSettingsComponent } from './account-settings/account-settings.component';
 
 @NgModule({
   declarations: [
@@ -20,11 +21,13 @@ import { Graphs1Component } from './graphs1/graphs1.component';
     DashboardComponent,
     ProgressComponent,
     Graphs1Component,
+    AccountSettingsComponent,
   ],
   exports:[
     DashboardComponent,
     ProgressComponent,
     Graphs1Component,
+    AccountSettingsComponent
   ],
   imports: [
     CommonModule,
