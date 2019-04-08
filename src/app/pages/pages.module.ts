@@ -4,6 +4,8 @@ import { PegesRoutingModule } from './pages.routing.module';
 
 import { SharedModule } from '../shared/shared.module';
 
+import { FormsModule } from '@angular/forms';
+
 import { SecurepagesComponent } from './securepages.component';
 
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -25,7 +27,8 @@ import { Graphs1Component } from './graphs1/graphs1.component';
   imports: [
     CommonModule,
     SharedModule, 
-    PegesRoutingModule
+    PegesRoutingModule,
+    FormsModule
   ]
 })
 export class PagesModule { }
