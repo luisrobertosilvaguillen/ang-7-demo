@@ -8,7 +8,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './login/register.component';
 import { ServiceModule } from './services/service.module';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,7 +21,8 @@ import { FormsModule } from '@angular/forms';
     PagesModule,
     AppRoutingModule,
     ServiceModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
