@@ -17,6 +17,9 @@ import { AccountSettingsComponent } from './account-settings/account-settings.co
 import { PromisesComponent } from './promises/promises.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
 
+import { PipesModule } from '../pipes/pipes.module';
+import { ProfileComponent } from './profile/profile.component';
+
 @NgModule({
   declarations: [
     SecurepagesComponent,
@@ -26,12 +29,14 @@ import { RxjsComponent } from './rxjs/rxjs.component';
     AccountSettingsComponent,
     PromisesComponent,
     RxjsComponent,
+    ProfileComponent
   ],
   exports:[
     DashboardComponent,
     ProgressComponent,
     Graphs1Component,
-    AccountSettingsComponent
+    AccountSettingsComponent,
+    ProfileComponent
   ],
   imports: [
     CommonModule,
@@ -39,7 +44,8 @@ import { RxjsComponent } from './rxjs/rxjs.component';
     PegesRoutingModule,
     FormsModule,
     ComponentsModule,
-    ChartsModule
+    ChartsModule,
+    PipesModule
   ]
 })
 export class PagesModule { }

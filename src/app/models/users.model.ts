@@ -7,7 +7,7 @@ export class User {
         public img? : string, 
         public role? : string, 
         public google? : boolean, 
-        public id? : string, 
+        public _id? : string, 
     ) 
     {
         

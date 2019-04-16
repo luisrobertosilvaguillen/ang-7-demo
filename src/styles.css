@@ -7,3 +7,11 @@
 .pointer {
     cursor: pointer;
 }
+
+.w150 {
+    width: 150px;
+}
+
+.mb10 {
+    margin-bottom: 10px;
+}
