@@ -19,6 +19,7 @@ import { RxjsComponent } from './rxjs/rxjs.component';
 
 import { PipesModule } from '../pipes/pipes.module';
 import { ProfileComponent } from './profile/profile.component';
+import { UsersComponent } from './users/users.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ProfileComponent } from './profile/profile.component';
     AccountSettingsComponent,
     PromisesComponent,
     RxjsComponent,
-    ProfileComponent
+    ProfileComponent,
+    UsersComponent
   ],
   exports:[
     DashboardComponent,

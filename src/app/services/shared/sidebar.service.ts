@@ -23,7 +23,22 @@ export class SidebarService {
         },
         {
           title:'Rxjs', url:'/rxjs',
-        }
+        } 
+      ]
+    },
+    {
+      title: 'General',
+      icon: 'mdi mdi-folder-lock-open',
+      submenu:[
+        {
+          title:'Usuarios', url:'/users',
+        },
+        {
+          title:'Hospitales', url:'/hospitals',
+        },
+        {
+          title:'Medicos', url:'/medics',
+        },
       ]
     }
   ]

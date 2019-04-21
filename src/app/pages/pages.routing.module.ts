@@ -10,6 +10,7 @@ import { PromisesComponent } from './promises/promises.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
 import { LoginGuardGuard } from '../services/service.index';
 import { ProfileComponent } from './profile/profile.component';
+import { UsersComponent } from './users/users.component';
 const routes: Routes = [
     {
       path:'', 
@@ -23,6 +24,8 @@ const routes: Routes = [
         {path:'rxjs', component: RxjsComponent, data:{title: 'Observables'}},
         {path:'account-settings', component: AccountSettingsComponent, data:{title: 'Style Settings'}},
         {path:'profile', component: ProfileComponent, data:{title: 'Perfil de Usuario'}},
+        //general
+        {path:'users', component: UsersComponent, data:{title: 'Usuarios'}},
         {path:'', redirectTo:'/dashboard', pathMatch: 'full'},
       ]
     }

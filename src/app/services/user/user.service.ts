@@ -84,9 +84,11 @@ export class UserService {
     let url = `${URL_SERVICE}/user/${user._id}`;
     return this.http.put(url, user).pipe(
       map((resp: any)=>{
-        let oUser : User = resp.user;
-        this.saveUserStorage(oUser._id, this.token, oUser);
-        swal.fire({title: "Usuario Actualizado", text: oUser.name, type: 'success'})
+        if(user._id == this.user._id){
+          let oUser : User = resp.user;
+          this.saveUserStorage(oUser._id, this.token, oUser);
+        }
+        swal.fire({title: "Usuario Actualizado", text: user.name, type: 'success'})
       })
     );
    }
@@ -101,5 +103,32 @@ export class UserService {
     .catch((err) => {
       console.log(err);
     })
+   }
+
+   loadUsers(from:number =0){
+    let url = `${URL_SERVICE}/user?from=${from}`;
+    return this.http.get(url);
+   }
+   searchUsers(term:string){
+    let url = `${URL_SERVICE}/search/collection/users/${term}`;
+    return this.http.get(url).pipe(
+      map((resp:any) => {
+        return resp.users;
+      })
+    );
+   }
+
+   deleteUser(id:string){
+      let url = `${URL_SERVICE}/user/${id}`;
+      return this.http.delete(url).pipe(
+        map((resp:any) => {
+          swal.fire(
+            'Eliminado!',
+            `${resp.name} ha sido eliminado exitosamente`,
+            'success'
+          )          
+          return true;
+        })
+      );
    }
 }
