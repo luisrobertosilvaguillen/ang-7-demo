@@ -1,0 +1,45 @@
+<div class="row">
+    <div class="col-md-6 animated fadeIn" >
+            <div class="card card-body">
+                <h3 class="box-title m-b-0">Médico</h3>
+                <div class="row">
+                    <div class="col-sm-12 col-xs-12">
+                        <form #f="ngForm" ngNativeValidate (ngSubmit)="saveMedic(f)">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Nombre del Médico</label>
+                                <input [(ngModel)]="medic.name" type="text" class="form-control" name="name" required placeholder="Nombre del Médico">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Hospital</label>
+                                <select (change)="changeHospital($event.target.value)" name="hospital" [(ngModel)]="medic.hospital._id" class="form-control" required>
+                                    <option value="">Seleccione Hospital</option>
+                                    <option *ngFor="let hospital of hospitals" [value]="hospital._id">{{hospital.name}}</option>
+                                </select>
+                            </div>
+
+                            <a [routerLink]="['/medics']" class="btn btn-inverse waves-effect waves-light">
+                                <i class="fa fa-arrow-left"></i>
+                                Cancelar
+                            </a>
+                            <button type="submit" class="btn btn-success waves-effect waves-light m-l-10">
+                                <i class="fa fa-save"></i>
+                                Guardar
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card card-body">
+            <h4 class="box-title m-b-0">Hospital</h4>
+            <img [src]="medic.hospital.img | image:'hospitals'" class="rounded img-fluid" >
+        </div>
+    </div>
+    <div class="col-md-3" *ngIf="medic._id">
+        <div class="card card-body">
+            <h4 class="box-title m-b-0">Imagen</h4>
+            <img (click)="updateImage()" [src]="medic.img | image:'medics'" class="rounded img-fluid pointer">
+        </div>
+    </div>
+</div>

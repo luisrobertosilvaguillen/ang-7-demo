@@ -24,7 +24,6 @@ export class UsersComponent implements OnInit {
     });
   }
   showModal(_id:string){
-    console.log(_id);
     this._modalUploadService.showModal("users", _id);
   }
   loadUsers(){
@@ -71,13 +70,6 @@ export class UsersComponent implements OnInit {
       return;
     }
 
-    swal.fire(
-      {
-        title: "Advertencia", 
-        text: `Desea eliminar a ${user.name}`, 
-        type: 'warning',
-
-      });
     swal.fire({
       title: 'Advertencia',
       text: `Desea eliminar a ${user.name}`,

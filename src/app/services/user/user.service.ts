@@ -4,7 +4,7 @@ import { User } from '../../models/users.model';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { URL_SERVICE } from '../../config/config';
 import { map } from 'rxjs/operators';
-import swal from 'sweetalert2'
+import swal from 'sweetalert2';
 import { UploadFileService } from '../upload-file/upload-file.service';
 @Injectable({
   providedIn: 'root'

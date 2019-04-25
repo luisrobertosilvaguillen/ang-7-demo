@@ -11,6 +11,9 @@ import { RxjsComponent } from './rxjs/rxjs.component';
 import { LoginGuardGuard } from '../services/service.index';
 import { ProfileComponent } from './profile/profile.component';
 import { UsersComponent } from './users/users.component';
+import { HospitalsComponent } from './hospitals/hospitals.component';
+import { MedicComponent } from './medics/medic.component';
+import { MedicsComponent } from './medics/medics.component';
 const routes: Routes = [
     {
       path:'', 
@@ -26,6 +29,9 @@ const routes: Routes = [
         {path:'profile', component: ProfileComponent, data:{title: 'Perfil de Usuario'}},
         //general
         {path:'users', component: UsersComponent, data:{title: 'Usuarios'}},
+        {path:'hospitals', component: HospitalsComponent, data:{title: 'Hospitales'}},
+        {path:'medics', component: MedicsComponent, data:{title: 'Medicos'}},
+        {path:'medic/:id', component: MedicComponent, data:{title: 'Administrador de Medicos'}},
         {path:'', redirectTo:'/dashboard', pathMatch: 'full'},
       ]
     }

@@ -9,7 +9,6 @@ export class ModalUploadService {
   public hide: string = "hideModal";
   public trigger = new EventEmitter<any>();
   constructor() {
-    console.log('Modal Service Listo')
    }
 
    hideModal(){

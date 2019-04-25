@@ -25,7 +25,6 @@ export class ModalUploadComponent implements OnInit {
   image: File;
   tempImage: string;
   ngOnInit() {
-    console.log('Modal Listo')
   }
   selectImage(file){
     if(!file){
